@@ -33,17 +33,13 @@ function inicializarEventos() {
     botonCancelar.addEventListener('click', cancelar,false);
     var dom = document.querySelector("html");
     dom.addEventListener('keypress', obtenerLetra,false);
-
-    if( navigator.userAgent.match(/Android/i)|| navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)){
-        document.getElementById("input").focus();
-    }
+    dom.addEventListener("touchstart", abrirTeclado, false);
     elegirPalabra();
 
+}
+
+function abrirTeclado(){
+    document.getElementById("input").focus();
 }
 
 function cancelar() {
