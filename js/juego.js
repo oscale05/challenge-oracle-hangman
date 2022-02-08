@@ -39,6 +39,7 @@ function inicializarEventos() {
 }
 
 function abrirTeclado(){
+    alert('abri teclado');
     document.getElementById("input").focus();
 }
 
