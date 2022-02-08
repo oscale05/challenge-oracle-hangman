@@ -137,8 +137,8 @@ input:focus{
  }
 
 
- .input-light::placeholder { color: #0A3871; font-weight: bold; }
- .input-dark::placeholder { color: #E5E5E5; font-weight: bold; }
+.input-light::placeholder { color: #0A3871; font-weight: bold; } 
+.input-dark::placeholder { color: #E5E5E5; font-weight: bold; }
 
 @media (max-width: 600px) {
 
@@ -237,7 +237,7 @@ input:focus{
 
 @media (max-width: 600px){
   .guiones {
-    margin: 30px 0px;
+    margin: 20px 0px;
   }
   
   .contenedor-letra{
