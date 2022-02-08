@@ -14,7 +14,7 @@
   <body class='light' id='body'>
     <div class="header">
         <img src="assets/Vector.svg" id='logo'>
-
+        <input type='text' id='input' class='input'  placeholder='comenzar' maxlength="1">
         <h1 id='resultado'></h1>
         <div class="btnModo">
             <a id='dark'>
@@ -32,7 +32,9 @@
       <div class="guiones" id="guiones">
       </div>
       <div id="erradas" class="erradas"></div>
-      <input type='text' id='input' class='input text-dark ocultar' maxlength="1" placeholder="Para comenzar tocá aquí">
+      <div class="entrada">
+        <input type='text' id='input' class='input  bg-light-input ocultar'  placeholder='comenzar' maxlength="1">
+      </div>
       <div class='botones'>
         <button class="btn  bg-dark" id='nuevo'>Nuevo juego</button>
         <button class="btn bg-light" id='cancelar'>Desistir</button>

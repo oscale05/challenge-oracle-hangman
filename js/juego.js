@@ -31,16 +31,20 @@ function inicializarEventos() {
     botonNuevo.addEventListener('click', borrar,false);
     var botonCancelar = document.getElementById("cancelar");
     botonCancelar.addEventListener('click', cancelar,false);
+    var input = document.getElementById("input");
     if( navigator.userAgent.match(/Android/i)|| navigator.userAgent.match(/webOS/i)
     || navigator.userAgent.match(/iPhone/i)
     || navigator.userAgent.match(/iPad/i)
     || navigator.userAgent.match(/iPod/i)
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)){
-        var input = document.getElementById("input");
         input.focus();
         input.addEventListener('input', obtenerLetraInput,false);
+        input.classList.remove('ocultar');
+        input.classList.add('mostrar');
     }else{
+        input.classList.remove('mostrar');
+        input.classList.add('ocultar');
         var dom = document.querySelector("html");
         dom.addEventListener('keypress', obtenerLetra,false);
     }
@@ -151,6 +155,8 @@ function buscoLetra(letra){
             case 11:
                 dibujarPiernaDer(); 
                 setInterval(dibujarBoca(), 1000);
+                document.getElementById('input').classList.remove('mostrar');
+                document.getElementById('input').classList.add('ocultar');
                 document.getElementById('resultado').classList.remove('texto-light');
                 document.getElementById('resultado').classList.add('texto-error');
                 document.getElementById('resultado').innerHTML='Perdiste!!';
@@ -167,6 +173,8 @@ function buscoLetra(letra){
             document.getElementById('resultado').classList.remove('texto-error');
             document.getElementById('resultado').classList.add('texto-dark');
         }
+       document.getElementById('input').classList.remove('mostrar');
+       document.getElementById('input').classList.add('ocultar');
        document.getElementById('resultado').innerHTML='Ganaste!!'; 
        terminado=true;
     }
@@ -185,7 +193,7 @@ function obtenerLetra(e){
 
 function obtenerLetraInput(e){
     if(!terminado){
-        let letra = e.target.value.toUpperCase();
+        let letra = e.target.value.toUpperCase(); 
         if(verificarLetra(letra)){
             buscoLetra(letra);
          };
