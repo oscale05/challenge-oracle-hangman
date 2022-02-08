@@ -164,6 +164,16 @@ body, html{
   letter-spacing: 2rem;
   font-size: 1.4rem;
 }
+ input{
+   width: 100%;
+   margin-top: 20px;
+   border:none !important;
+   background-color:transparent !important;
+   color: transparent !important;
+ }
+ input:focus{
+  outline: none !important;
+}
 
 .text-light{
   color: #E5E5E5;
