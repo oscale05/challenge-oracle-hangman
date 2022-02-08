@@ -19,8 +19,8 @@ function inicializarCanvas() {
 
 function dibujarBase(){
     dibujo.beginPath();
-    dibujo.moveTo(0,345);
-    dibujo.lineTo(280,345);
+    dibujo.moveTo(0,300);
+    dibujo.lineTo(280,300);
     dibujo.strokeStyle = color;
     dibujo.lineWidth = 5;
     dibujo.lineCap = "round";
@@ -30,7 +30,7 @@ function dibujarBase(){
 
 function dibujarPoste(){
     dibujo.beginPath();
-    dibujo.moveTo(80,345);
+    dibujo.moveTo(80,300);
     dibujo.lineTo(80,16);
     dibujo.strokeStyle = color;
     dibujo.lineWidth = 5;
