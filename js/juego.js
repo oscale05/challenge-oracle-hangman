@@ -23,8 +23,6 @@ window.addEventListener("DOMContentLoaded", function() {
 }, false);
 
 function inicializarEventos() {  
-
-    document.getElementById("input").focus();
     var btnDark = document.getElementById("dark");
     btnDark.addEventListener('click', modoDark,false);
     var btnLight = document.getElementById("light");
@@ -33,13 +31,26 @@ function inicializarEventos() {
     botonNuevo.addEventListener('click', borrar,false);
     var botonCancelar = document.getElementById("cancelar");
     botonCancelar.addEventListener('click', cancelar,false);
-    var dom = document.querySelector("html");
-    dom.addEventListener('keypress', obtenerLetra,false);
+    if( navigator.userAgent.match(/Android/i)|| navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)){
+        var input = document.getElementById("input");
+        input.focus();
+        input.addEventListener('input', obtenerLetraInput,false);
+    }else{
+        var dom = document.querySelector("html");
+        dom.addEventListener('keypress', obtenerLetra,false);
+    }
     elegirPalabra();
 
 }
 
-
+function abrirTeclado(){
+    document.getElementById("input").focus();
+}
 
 function cancelar() {
     window.location.href='index.html';
@@ -169,6 +180,16 @@ function obtenerLetra(e){
         if(verificarLetra(letra)){
             buscoLetra(letra);
          };
+    }
+}
+
+function obtenerLetraInput(e){
+    if(!terminado){
+        let letra = e.target.value.toUpperCase();
+        if(verificarLetra(letra)){
+            buscoLetra(letra);
+         };
+         e.target.value = '';
     }
 }
 
