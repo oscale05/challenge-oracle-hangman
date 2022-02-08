@@ -69,6 +69,7 @@ function borrar(){
     contadorIntentos = 0;
     contadorExitos = 0;
     terminado = false;
+    document.getElementById('input').placeholder = "Comenzar";
     const div = document.querySelectorAll(".contenedor-letra");
     for (var i = 0; i < div.length; i++){ 
         div[i].isConnected;
@@ -192,6 +193,7 @@ function obtenerLetra(e){
 }
 
 function obtenerLetraInput(e){
+    e.target.placeholder = "Jugando!!";
     if(!terminado){
         let letra = e.target.value.toUpperCase(); 
         if(verificarLetra(letra)){
