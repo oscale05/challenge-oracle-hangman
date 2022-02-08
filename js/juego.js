@@ -77,8 +77,9 @@ function elegirPalabra(){
         || navigator.userAgent.match(/Windows Phone/i)){
             const div=document.createElement("input");
             div.setAttribute('maxlength', '1');
+        }else{
+            const div=document.createElement("div");
         }
-        const div=document.createElement("div");
         div.id=i;
         if(modo=='dark'){
             div.className="contenedor-letra border-color-light";
