@@ -148,6 +148,19 @@ input:focus{
  outline: none !important;
 }
 
+.input{
+  text-align: center;
+  font-size:25px;
+  align-items: center;
+  margin-right: 17px;
+  width: 30px;
+  height: 30px;
+  background-color:transparent !important;
+  border: none !important;
+  color: transparent !important;
+  caret-color: transparent;
+}
+
 .contenedor-letra{
   text-align: center;
   font-size:25px;
@@ -156,8 +169,6 @@ input:focus{
   width: 30px;
   height: 30px;
   background-color:transparent !important;
-  border:none !important;
-/*   caret-color: transparent; */
 }
 
 
@@ -184,12 +195,12 @@ input:focus{
 }
 
 .border-color-dark{
-  border-bottom: 3px solid #0A3871 !important;
+  border-bottom: 3px solid #0A3871;
   color:#0A3871;
 }
 
 .border-color-light{
-  border-bottom: 3px solid #E5E5E5 !important;
+  border-bottom: 3px solid #E5E5E5;
   color:#E5E5E5;
 }
 

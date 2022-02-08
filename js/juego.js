@@ -76,11 +76,11 @@ function elegirPalabra(){
         || navigator.userAgent.match(/iPod/i)
         || navigator.userAgent.match(/BlackBerry/i)
         || navigator.userAgent.match(/Windows Phone/i)){
-            div=document.createElement("input");
-            div.setAttribute('maxlength', '1');
-        }else{
-            div=document.createElement("div");
+            input=document.createElement("input");
+            input.setAttribute('maxlength', 1);
+            input.className="input";
         }
+        div=document.createElement("div");
         div.id=i;
         if(modo=='dark'){
             div.className="contenedor-letra border-color-light";
