@@ -148,18 +148,12 @@ input:focus{
  outline: none !important;
 }
 
-.input{
-  text-align: center;
-  font-size:25px;
-  align-items: center;
-  margin-right: 17px;
-  width: 30px;
-  height: 30px;
+/* .ocultar{
   background-color:transparent !important;
   border: none !important;
   color: transparent !important;
   caret-color: transparent;
-}
+} */
 
 .contenedor-letra{
   text-align: center;

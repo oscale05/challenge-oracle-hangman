@@ -23,6 +23,8 @@ window.addEventListener("DOMContentLoaded", function() {
 }, false);
 
 function inicializarEventos() {  
+
+    document.getElementById("input").focus();
     var btnDark = document.getElementById("dark");
     btnDark.addEventListener('click', modoDark,false);
     var btnLight = document.getElementById("light");
@@ -33,15 +35,11 @@ function inicializarEventos() {
     botonCancelar.addEventListener('click', cancelar,false);
     var dom = document.querySelector("html");
     dom.addEventListener('keypress', obtenerLetra,false);
-    dom.addEventListener("touchstart", abrirTeclado, false);
     elegirPalabra();
 
 }
 
-function abrirTeclado(){
-    alert('abri teclado');
-    document.getElementById("input").focus();
-}
+
 
 function cancelar() {
     window.location.href='index.html';
