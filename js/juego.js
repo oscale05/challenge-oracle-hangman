@@ -220,6 +220,8 @@ function modoDark(){
     document.getElementById('resultado').classList.add('texto-light');
     document.getElementById('erradas').classList.remove('texto-dark');
     document.getElementById('erradas').classList.add('texto-light');
+    document.getElementById('input').classList.remove('input-light');
+    document.getElementById('input').classList.add('input-dark');
     const div = document.querySelectorAll(".contenedor-letra");
     for (var i = 0; i < div.length; i++){ 
         div[i].classList.remove('border-color-dark');
@@ -243,6 +245,8 @@ function modoLight(){
     document.getElementById('resultado').classList.add('texto-dark');
     document.getElementById('erradas').classList.remove('texto-light');
     document.getElementById('erradas').classList.add('texto-dark');
+    document.getElementById('input').classList.remove('input-dark');
+    document.getElementById('input').classList.add('input-light');
     const div = document.querySelectorAll(".contenedor-letra");
     for (var i = 0; i < div.length; i++){ 
         div[i].classList.remove('border-color-light');

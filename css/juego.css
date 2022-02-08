@@ -134,8 +134,11 @@ input:focus{
    border: none !important;
    text-align: center;
    caret-color: transparent !important;
-   color:#0A3871 !important;
  }
+
+
+ .input-light::placeholder { color: #0A3871; font-weight: bold; }
+ .input-dark::placeholder { color: #E5E5E5; font-weight: bold; }
 
 @media (max-width: 600px) {
 
