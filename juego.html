@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  </head>
+  <body class='light' id='body'>
+    <div class="header">
+        <img src="assets/Vector.svg" id='logo'>
+
+        <h1 id='resultado'></h1>
+        <div class="btnModo">
+            <a id='dark'>
+                <div class='btn-modo bg-dark'>Dark</div>
+            </a>
+            <a id='light'>
+                <div class='btn-modo bg-light'>Light</div>
+            </a>
+        </div>
+    </div>
+    <div class='contenedor'>
+      <div class='contenedor-canva'>
+        <canvas id="ahorcado" height="350px" width="295px"></canvas>
+      </div>
+      <div class="guiones" id="guiones"></div>
+      <div id="erradas" class="erradas"></div>
+      <div class='botones'>
+        <button class="btn  bg-dark" id='nuevo'>Nuevo juego</button>
+        <button class="btn bg-light" id='cancelar'>Desistir</button>
+      </div>
+    </div>
+   
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/juego.js"></script>
+  </body>
+</html>

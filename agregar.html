@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ahorcado</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/agregar.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body class='light' id='body'>
+        <div class="header">
+            <img src="assets/Vector.svg" id='logo'></img>
+            <div class="btnModo">
+                <a id='dark'>
+                    <div class='btn-modo bg-dark'>Dark</div>
+                </a>
+                <a id='light'>
+                    <div class='btn-modo bg-light'>Light</div>
+                </a>
+            </div>
+        </div>
+        <div class='box'>
+            <h1>Ingrese una Palabra</h1>
+            <textarea id='palabraNueva' class='light' maxlength='8' required></textarea>
+            <div class='alerta text-light' id='alerta'>
+                <span class="material-icons"> error</span>
+                <p class='alerta' id='textAlerta'> Máx. de 8 letras</p>
+            </div>
+            <div class='botones'>
+                <button class="btn  bg-dark" id='agregar'>Guardar y empezar</button>
+                <button class="btn bg-light" id='cancelar'>Cancelar</button>
+            </div>
+        </div>
+    </body>
+    <script src='js/agregar.js'></script>
+</html>
