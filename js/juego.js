@@ -64,6 +64,7 @@ function borrar(){
 }
 
 function elegirPalabra(){
+    let div;
     let max = palabras.length;
     let posicionPalabras = Math.floor(Math.random() * (max - 0)) + 0;
     palabraEnjuego=palabras[posicionPalabras];
@@ -75,10 +76,10 @@ function elegirPalabra(){
         || navigator.userAgent.match(/iPod/i)
         || navigator.userAgent.match(/BlackBerry/i)
         || navigator.userAgent.match(/Windows Phone/i)){
-            const div=document.createElement("input");
+            div=document.createElement("input");
             div.setAttribute('maxlength', '1');
         }else{
-            const div=document.createElement("div");
+            div=document.createElement("div");
         }
         div.id=i;
         if(modo=='dark'){

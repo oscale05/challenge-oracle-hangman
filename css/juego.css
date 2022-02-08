@@ -157,7 +157,7 @@ input:focus{
   height: 30px;
   background-color:transparent !important;
   border:none !important;
-/*   caret-color: transparent; */
+  caret-color: transparent;
 }
 
 
