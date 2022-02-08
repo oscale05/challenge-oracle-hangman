@@ -144,6 +144,9 @@ body, html{
   color:#0A3871;
 }
 
+input:focus{
+ outline: none !important;
+}
 
 .contenedor-letra{
   text-align: center;
@@ -152,6 +155,9 @@ body, html{
   margin-right: 17px;
   width: 30px;
   height: 30px;
+  background-color:transparent !important;
+  border:none !important;
+  caret-color: transparent;
 }
 
 
@@ -164,16 +170,7 @@ body, html{
   letter-spacing: 2rem;
   font-size: 1.4rem;
 }
- input{
-   width: 100%;
-   margin-top: 20px;
-   border:none !important;
-   background-color:transparent !important;
-   color: transparent !important;
- }
- input:focus{
-  outline: none !important;
-}
+
 
 .text-light{
   color: #E5E5E5;
@@ -187,12 +184,12 @@ body, html{
 }
 
 .border-color-dark{
-  border-bottom: 3px solid #0A3871;
+  border-bottom: 3px solid #0A3871 !important;
   color:#0A3871;
 }
 
 .border-color-light{
-  border-bottom: 3px solid #E5E5E5;
+  border-bottom: 3px solid #E5E5E5 !important;
   color:#E5E5E5;
 }
 

@@ -69,6 +69,15 @@ function elegirPalabra(){
     palabraEnjuego=palabras[posicionPalabras];
     let contenedor = document.getElementById("guiones")
     for (let i = 0; i < palabraEnjuego.length; i++) {
+        if( navigator.userAgent.match(/Android/i)|| navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)){
+            const div=document.createElement("input");
+            div.setAttribute('maxlength', '1');
+        }
         const div=document.createElement("div");
         div.id=i;
         if(modo=='dark'){
